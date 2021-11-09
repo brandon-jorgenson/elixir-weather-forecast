@@ -1,6 +1,10 @@
 # WeatherForecast
 
-**TODO: Add description**
+The WeatherForecast app helps you find the average max temperature over the next six days (including the current day) for three specific cities.
+
+Those cities are: Salt Lake City, Los Angeles, and Boise.
+
+The [MetaWeather API](https://www.metaweather.com/api) is used to retrieve the data.
 
 ## Installation
 
@@ -18,4 +22,3 @@ end
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/weather_forecast](https://hexdocs.pm/weather_forecast).
-
