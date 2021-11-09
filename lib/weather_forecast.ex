@@ -14,7 +14,7 @@ defmodule WeatherForecast do
   @base_url "https://www.metaweather.com/api"
 
   @doc """
-  Prints out the average max temperature over a six day forecast
+  Prints out the average max temperature over a six day forecast (including the current day)
   for the locations listed in @location_id_map
   """
   def get_average_max_temp_for_locations do
@@ -29,8 +29,8 @@ defmodule WeatherForecast do
   @doc """
   Returns the average max temperature over a six day forecast for a given location
   ## Parameters
-    - location: The location we want the max temp for
-    - location_id: The id that the metaweather id needs for the location
+    - location: The location we want the average max temp for
+    - location_id: The id that matches the location in the metaweather api
   """
   def get_average_max_temp(location, location_id) do
     case get_weather_from_location(location_id) do
@@ -50,9 +50,9 @@ defmodule WeatherForecast do
   end
 
   @doc """
-  Calls the weather api and returns the weather data
+  Calls the metaweather api and returns the weather data
   ## Parameters
-    - id: The id that the metaweather id needs to identify the location
+    - id: The id that matches the location in the metaweather api
   """
   def get_weather_from_location(id) do
     url = "#{@base_url}/location/#{id}"
